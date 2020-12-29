@@ -34,18 +34,18 @@ package org.springframework.context;
 public interface ApplicationEventPublisher {
 
 	/**
-	 * Notify all <strong>matching</strong> listeners registered with this
-	 * application of an application event. Events may be framework events
-	 * (such as ContextRefreshedEvent) or application-specific events.
-	 * <p>Such an event publication step is effectively a hand-off to the
+	 * notify all <strong>matching</strong> listeners registered with this
+	 * application of an application event. events may be framework events
+	 * (such as contextrefreshedevent) or application-specific events.
+	 * <p>such an event publication step is effectively a hand-off to the
 	 * multicaster and does not imply synchronous/asynchronous execution
-	 * or even immediate execution at all. Event listeners are encouraged
+	 * or even immediate execution at all. event listeners are encouraged
 	 * to be as efficient as possible, individually using asynchronous
 	 * execution for longer-running and potentially blocking operations.
 	 * @param event the event to publish
-	 * @see #publishEvent(Object)
-	 * @see org.springframework.context.event.ContextRefreshedEvent
-	 * @see org.springframework.context.event.ContextClosedEvent
+	 * @see #publishevent(object)
+	 * @see org.springframework.context.event.contextrefreshedevent
+	 * @see org.springframework.context.event.contextclosedevent
 	 */
 	default void publishEvent(ApplicationEvent event) {
 		publishEvent((Object) event);

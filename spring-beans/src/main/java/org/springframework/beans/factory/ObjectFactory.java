@@ -37,6 +37,7 @@ import org.springframework.beans.BeansException;
  * @see FactoryBean
  */
 @FunctionalInterface
+//函数式接口
 public interface ObjectFactory<T> {
 
 	/**
